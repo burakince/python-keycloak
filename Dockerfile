@@ -1,3 +1,3 @@
 FROM python:3.9-slim-buster
 
-RUN pip install python-keycloak==0.27.0
+RUN pip install python-keycloak==0.26.1
