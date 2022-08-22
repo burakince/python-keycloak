@@ -6,8 +6,6 @@ name: Docker
 # documentation.
 
 on:
-  schedule:
-    - cron: '25 8 * * 0'
   push:
     branches: [ main ]
     # Publish semver tags as releases.
@@ -112,6 +110,7 @@ jobs:
             io.artifacthub.package.maintainers=[{"name":"burakince","email":"burak.ince@linux.org.tr"}]
             io.artifacthub.package.keywords=python,keycloak,oidc
             io.artifacthub.package.license=MIT
+            io.artifacthub.package.alternative-locations=docker.io/${{ env.IMAGE_NAME }}
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
