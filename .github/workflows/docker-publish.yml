@@ -13,6 +13,7 @@ on:
     paths:
       - '.github/workflows/docker-publish.yml'
       - 'Dockerfile'
+      - 'requirements.txt'
 
   pull_request:
     branches: [ main ]
