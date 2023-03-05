@@ -81,14 +81,14 @@ jobs:
         run: |
           echo ${{ secrets.GITHUB_TOKEN }} | oras login ghcr.io --username ${{ github.actor }} --password-stdin
 
-      - name: Publish Artifact Hub Manifest
-        id: publish_ah_manifest
-        if: github.event_name != 'pull_request'
-        run: |
-          oras push \
-            ghcr.io/${{ env.IMAGE_NAME }}:artifacthub.io \
-            --config /dev/null:application/vnd.cncf.artifacthub.config.v1+yaml \
-            artifacthub-repo.yml:application/vnd.cncf.artifacthub.repository-metadata.layer.v1.yaml
+#       - name: Publish Artifact Hub Manifest
+#         id: publish_ah_manifest
+#         if: github.event_name != 'pull_request'
+#         run: |
+#           oras push \
+#             ghcr.io/${{ env.IMAGE_NAME }}:artifacthub.io \
+#             --config /dev/null:application/vnd.cncf.artifacthub.config.v1+yaml \
+#             artifacthub-repo.yml:application/vnd.cncf.artifacthub.repository-metadata.layer.v1.yaml
 
       # Extract metadata (tags, labels) for Docker
       # https://github.com/docker/metadata-action
