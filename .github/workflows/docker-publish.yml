@@ -105,7 +105,7 @@ jobs:
             type=sha
             type=ref,event=tag
           labels: |
-            io.artifacthub.package.readme-url=https://raw.githubusercontent.com/${{ env.IMAGE_NAME }}/main/README.md
+            io.artifacthub.package.readme-url=https://raw.githubusercontent.com/${{ env.IMAGE_NAME }}/refs/heads/main/README.md
             io.artifacthub.package.maintainers=[{"name":"burakince","email":"burak.ince@linux.org.tr"}]
             io.artifacthub.package.logo-url=https://raw.githubusercontent.com/keycloak/keycloak.github.io/refs/heads/main/resources/images/icon.svg
             io.artifacthub.package.keywords=python,keycloak,oidc
