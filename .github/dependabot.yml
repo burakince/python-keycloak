@@ -37,7 +37,6 @@ updates:
       interval: "daily"
     ignore:
       - dependency-name: "python"
-        update-types: ["version-update:semver-minor"]
     reviewers:
       - "burakince"
     groups:
